@@ -67,7 +67,7 @@ textarea {
 }
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 768px) {
   .no-discount {
     display: none;
   }
