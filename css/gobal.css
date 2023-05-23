@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.clr {
+  clear: both;
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+a {
+  transition: .3s;
+}
+
+body {
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  /* font family công ty mình hay dùng */
+  color: #333;
+  outline: none;
+}
+
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  text-rendering: geometricPrecision;
+}
+
+input[type=text],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+}
+
+
+@media only screen and (max-width: 640px) {
+  .no-discount {
+    display: none;
+  }
+
+  [class^="icon-"],
+  [class*="icon-"] {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/bhx@2x.v202305150656.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    background-size: 325px auto;
+  }
+
+  [class^="btn-"],
+  [class*="btn-"] {
+    background-color: #f5f9f6;
+    text-transform: uppercase;
+    padding: 11px 0;
+  }
+
+  /* Header */
+  header {
+    background: radial-gradient(159.85% 367.97% at 150% 123.85%, #ffe147 0, #65ae17 38.76%, #469c4b 59.65%, #00713b 100%);
+  }
+
+  /* top-header */
+  .top-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 6px 6px 0 6px;
+    position: relative;
+  }
+
+  .icon-logo {
+    background-position: -99px -1804px;
+    width: 107px;
+    position: relative;
+    top: 6px;
+  }
+
+  .loca {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, .15);
+    min-width: 205px;
+    line-height: 27px;
+    top: 6px;
+    position: relative;
+  }
+
+  .loca::after {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    content: '';
+    width: 6px;
+    height: 6px;
+    transform: rotate(222deg);
+    position: absolute;
+    right: 7px;
+    top: 7px;
+  }
+
+  .loca-wp {
+    margin: 0 5px;
+  }
+
+  .icon-loca {
+    background-position: -246px -1812px;
+    width: 9px;
+    height: 10px;
+  }
+
+  /* Search-header */
+  .search-head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 6px;
+  }
+
+  .menu {
+    background: #fff;
+    color: #007e42;
+    text-align: center;
+    width: 54px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .icon-menu {
+    background-position: -214px -1757px;
+    width: 19px;
+    height: 36px;
+  }
+
+  .mainSearch {
+    display: block;
+    width: calc(100% - 54px);
+    position: relative;
+  }
+
+  .mainSearch .search-input {
+    background: #fff;
+    width: 100%;
+    border: 0;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 0;
+    font-size: 14px;
+    text-indent: 6px;
+  }
+
+  .icon-search {
+    background-position: -251px -1734px;
+    width: 19px;
+    height: 20px;
+    top: 11px;
+    right: 50px;
+    position: absolute;
+  }
+
+  .icon-cart {
+    background-position: -210px -1732px;
+    width: 23px;
+    height: 23px;
+    top: 11px;
+    right: 18px;
+    position: absolute;
+  }
+
+  /* top-header */
+  .bottom-head {
+    padding: 0 10px 5px 10px;
+  }
+
+  /* footer */
+  footer .nav {
+    margin-bottom: 50px;
+  }
+
+  .callcenter {
+    padding: 4px 6px;
+    background: #007e42;
+    font-size: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .callcenter .infocc {
+    display: inline-block;
+    width: calc(100%/3 - 2px);
+    line-height: 12px;
+  }
+
+  .callcenter .infocc {
+    font-size: 10px;
+  }
+
+  .callcenter .infocc .time {
+    font-size: 10px;
+  }
+
+  .callcenter .infocc .phone {
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+  }
+
+  .icon-tel {
+    background-position: -93px -400px;
+    width: 11px;
+    height: 11px;
+  }
+
+  .infocc .phone a {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .infocc .phone a:hover {
+    text-decoration: none;
+  }
+
+  .callcenter .moreinfo {
+    display: flex;
+    position: relative;
+    width: 91px;
+    background: #198b55;
+    border-radius: 3px;
+    line-height: 27px;
+    padding: 0 5px;
+  }
+
+  .callcenter .moreinfo span {
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding-right: 15px;
+    width: 100%;
+  }
+
+  .icon-ardown {
+    right: 8px;
+    top: 10px;
+    background-position: -195px -588px;
+    width: 11px;
+    height: 7px;
+    position: absolute;
+  }
+
+  .footer-nav {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    background: #fff;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, .15);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .footer-nav li {
+    width: 20%;
+    text-align: center;
+  }
+
+  .footer-nav li a {
+    color: #515764;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  [class^="iconft-"],
+  [class*="iconft-"] {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/sprite-sync-app-web.v202305150656.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    width: 28px;
+    height: 28px;
+    background-size: 360px auto;
+  }
+
+  .iconft-sp {
+    background-position: -31px -84px;
+  }
+
+  .iconft-km {
+    background-position: -80px -34px;
+  }
+
+  .iconft-gh {
+    background-position: -132px -33px;
+  }
+
+  .iconft-tb {
+    background-position: -183px -33px;
+  }
+
+  .iconft-user {
+    background-position: -235px -34px;
+  }
+
+  .nav-link-bottom .footer-nav li a:hover {
+    text-decoration: none;
+  }
+
+  .nav-link-bottom .footer-nav li a p {
+    margin: 0;
+  }
+
+  .nav-link-bottom .footer-nav li.active a {
+    color: #007e42;
+  }
+}
