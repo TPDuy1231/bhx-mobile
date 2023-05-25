@@ -67,11 +67,13 @@ textarea {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 640px) {
   .no-discount {
     display: none;
   }
-  
+
+  /* ICON */
+
   [class^="icon-"],
   [class*="icon-"] {
     background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/bhx@2x.v202305150656.png);
@@ -88,10 +90,395 @@ textarea {
     padding: 11px 0;
   }
 
+  .icon-closemenu {
+    background-position: -35px -638px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .icon-stores {
+    background-position: -10px -636px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .icon-search2 {
+    background-position: -231px 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  .icon-prdpromo {
+    background-position: -185px -88px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-closelocanav {
+    background-position: -121px -616px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .icon-locanear {
+    background-position: -192px -1027px;
+    width: 19px;
+    height: 23px;
+  }
+
+  .icon-locasearch {
+    background-position: -231px 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .icon-staryellow {
+    background-position: -50px -74px;
+    width: 19px;
+    height: 20px;
+  }
+
+  .icon-policy {
+    width: 13px;
+    height: 14px;
+    background-position: -150px -947px;
+  }
+
+  .icon-back {
+    background-position: -287px -585px;
+    width: 14px;
+    height: 20px;
+  }
+
+  .iconft-cart {
+    background-position: -30px -161px;
+    width: 175px;
+    height: 100px;
+  }
+
+  .iconft-ring {
+    background-position: -226px -156px;
+    width: 112px;
+    height: 112px;
+  }
+
+  .icon-phone {
+    background-position: -106px -196px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-fb {
+    background-position: -80px -35px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-gg {
+    background-position: -160px -196px;
+    width: 16px;
+    height: 17px;
+  }
+
+  .icon-gift {
+    background-position: -189px -982px;
+    width: 24px;
+    height: 27px;
+  }
+
+  .icon-expired {
+    background-position: -224px -982px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .icon-bag {
+    background-position: -260px -982px;
+    width: 27px;
+    height: 27px;
+  }
+
+  /* Arrow */
+
+  .arrow::after {
+    border-top: 1px solid #222b45;
+    border-left: 1px solid #222b45;
+    content: '';
+    width: 8px;
+    height: 8px;
+  }
+
+  .arrow-right::after {
+    transform: rotate(135deg);
+    position: absolute;
+  }
+
+  .arrow-bottom::after {
+    transform: rotate(222deg);
+    position: absolute;
+  }
+
   /* Header */
   header {
     background: radial-gradient(159.85% 367.97% at 150% 123.85%, #ffe147 0, #65ae17 38.76%, #469c4b 59.65%, #00713b 100%);
   }
+
+  /* list-menu list-loca*/
+  .boxMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 4;
+    animation: modalMenuIn ease 0.2s;
+}
+
+.locanav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-color: #fff;
+    display: none;
+    animation: modalLocaIn ease 0.2s;
+
+}
+
+    /* Loca */
+    .locanav-alert {
+      background: #fffbe5;
+      padding: 12px 10px;
+      color: #222b45;
+      font-size: 13px;
+  }
+
+  .locanav-title {
+      background-color: #037841;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 0;
+      font-size: 14px;
+  }
+
+  .locanav-title h3 {
+      font-size: 14px;
+      font-weight: 400;
+  }
+
+  .locanav-title .icon-closelocanav {
+      position: absolute;
+      right: 10px;
+      top: 74px;
+  }
+
+  .locanav-search {
+      margin: 10px;
+  }
+
+  .loca-near {
+      padding-bottom: 7px;
+      margin-left: -1px;
+  }
+
+  .loca-near .icon-locanear {
+      position: relative;
+      top: 6px;
+  }
+
+  .loca-near span {
+      color: #037841;
+      font-size: 14px;
+  }
+
+.boxMenu.open {
+    display: block;
+}
+
+.locanav.open {
+    display: block;
+}
+
+.boxMenu,
+.locanav {
+    width: 100%;
+    z-index: 5;
+}
+
+.menu-main {
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    background: #f2f4f9;
+    box-sizing: border-box;
+}
+
+.menu-main li {
+    display: block;
+    position: relative;
+}
+
+.menu-main li a {
+    font-size: 16px;
+}
+
+.close-box {
+    display: flex;
+    height: 56px;
+    background: linear-gradient(180deg, #007e42 26.54%, #759d2e 100%);
+    padding: 8px;
+}
+
+.closemenu {
+    width: 52px;
+    margin-right: 6px;
+    text-align: center;
+    background: linear-gradient(180deg, #198b55 26.54%, #6da146 100%);
+}
+
+.closemenu span {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.2em;
+}
+
+.homepage {
+    margin-left: 0;
+    margin-right: 6px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #198b55 26.54%, #6da146 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    border-radius: 3px;
+    text-align: center;
+    float: right;
+    color: #fff;
+}
+
+.homepage span {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.2em;
+    margin-top: 3px;
+}
+
+.nav-search {
+    display: block;
+    background: transparent;
+    position: absolute;
+    padding: 6px 0;
+    padding-right: 6px;
+    padding-left: 6px;
+    width: calc(100% - 124px);
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.nav-search .icon-search2 {
+    top: 20px;
+    right: 13px;
+    position: absolute;
+}
+
+.nav-search .search-menu {
+    background: #fff;
+    color: #9da7bc;
+    width: 100%;
+    height: 40px;
+    margin: 2px 0;
+    border: 0;
+    border-radius: 3px;
+    font-size: 12px;
+    text-indent: 8px;
+}
+
+.menu-promo {
+    padding: 18px 0;
+    margin: 0 12px;
+    border-top: 1px solid #e4e9f2;
+}
+
+.menu-promo .icon-prdpromo {
+    margin: 0 3px 2px 2px;
+    border-radius: 50%;
+    background-size: 300px auto;
+}
+
+.menu-promo a {
+    color: #222b45;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: flex;
+}
+
+.topromo-page::after {
+    right: 4px;
+    top: 23px;
+}
+
+.count-prm {
+    color: #9da7bc;
+    padding-left: 5px;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 14px;
+}
+
+.has-menuchild {
+    margin: 0 12px;
+}
+
+.nav-parent {
+    border-top: 1px solid #e4e9f2;
+    display: block;
+    overflow: hidden;
+    line-height: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #222b45;
+    width: 100%;
+    padding: 15px 0 15px 0;
+    text-transform: uppercase;
+}
+
+.nav-parent::after {
+    right: 2px;
+    top: 20px;
+}
+
+.nav-parent p {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 18px;
+    margin: 0;
+}
+
+.nav-parent .count-pro {
+    color: #9da7bc;
+    padding-left: 5px;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 14px;
+}
+
+.nav-parent p i {
+    position: absolute;
+    right: 0;
+}
 
   /* top-header */
   .top-head {
@@ -206,7 +593,7 @@ textarea {
   }
 
   /* footer */
-  footer .nav {
+  footer {
     margin-bottom: 50px;
   }
 
@@ -249,10 +636,6 @@ textarea {
   .infocc .phone a {
     color: #fff;
     font-size: 14px;
-  }
-
-  .infocc .phone a:hover {
-    text-decoration: none;
   }
 
   .callcenter .moreinfo {
@@ -318,33 +701,37 @@ textarea {
     background-repeat: no-repeat;
     display: inline-block;
     line-height: 30px;
-    width: 28px;
-    height: 28px;
     background-size: 360px auto;
   }
 
   .iconft-sp {
     background-position: -31px -84px;
+    width: 28px;
+    height: 28px;
   }
 
   .iconft-km {
     background-position: -80px -34px;
+    width: 28px;
+    height: 28px;
   }
 
   .iconft-gh {
     background-position: -132px -33px;
+    width: 28px;
+    height: 28px;
   }
 
   .iconft-tb {
     background-position: -183px -33px;
+    width: 28px;
+    height: 28px;
   }
 
   .iconft-user {
     background-position: -235px -34px;
-  }
-
-  .nav-link-bottom .footer-nav li a:hover {
-    text-decoration: none;
+    width: 28px;
+    height: 28px;
   }
 
   .nav-link-bottom .footer-nav li a p {
@@ -353,5 +740,25 @@ textarea {
 
   .nav-link-bottom .footer-nav li.active a {
     color: #007e42;
+  }
+
+  @keyframes modalMenuIn {
+    from {
+      transform: translateX(-390px);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes modalLocaIn {
+    from {
+      transform: translateY(-600px);
+    }
+
+    to {
+      transform: translateY(0);
+    }
   }
 }
