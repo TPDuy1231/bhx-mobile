@@ -1,4 +1,21 @@
 @media only screen and (max-width: 640px) {
+<<<<<<< HEAD
+=======
+
+/*     .owl-dots,
+    .owl-nav {
+        display: none;
+    }
+
+    .owl-cate .owl-dots {
+        display: block;
+    }
+
+    .owl-cate1 .owl-dots {
+        display: none;
+    } */
+
+>>>>>>> 21c2c2036e1e4f3c16ee156be23ff65003a74530
     /* section */
     section {
         background: #f5f8fd;
